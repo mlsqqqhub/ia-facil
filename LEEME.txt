@@ -1,0 +1,21 @@
+IA FÁCIL v3 — 5 ARTÍCULOS
+
+Incluye index.html, generador de prompts y cinco páginas en articles/.
+
+Prueba:
+1. Extrae el ZIP.
+2. Abre index.html en Chrome o Edge.
+3. Abre cada artículo desde la página principal.
+4. Prueba generar, copiar y descargar un prompt.
+
+Publicación:
+1. No borres el proyecto actual de Cloudflare.
+2. Publica los archivos estáticos con el flujo adecuado para tu proyecto.
+3. Mantén index.html en la raíz y la carpeta articles con los cinco HTML dentro.
+4. Verifica la página principal y los cinco enlaces públicos.
+
+Antes de AdSense:
+- Sustituye el email de ejemplo por uno real.
+- Añade una política de privacidad adaptada a los servicios que uses y una página de contacto real.
+- Revisa y amplía los artículos con ejemplos propios y datos verificados.
+- Consulta los requisitos oficiales de Google. La aprobación y los ingresos no están garantizados.
