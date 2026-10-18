@@ -1,28 +1,11 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/articles/chatgpt-gratis.html</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/articles/crear-imagenes-ia.html</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/articles/escribir-buenos-prompts.html</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/articles/herramientas-ia-gratis.html</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/articles/ia-para-estudiar.html</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/privacidad.html</loc>
-  </url>
-  <url>
-    <loc>https://ia-facil.iafacil.workers.dev/contacto.html</loc>
-  </url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/articles/chatgpt-gratis.html</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/articles/crear-imagenes-ia.html</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/articles/escribir-buenos-prompts.html</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/articles/herramientas-ia-gratis.html</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/articles/ia-para-estudiar.html</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/privacidad.html</loc></url>
+  <url><loc>https://ia-facil.iafacil.workers.dev/contacto.html</loc></url>
 </urlset>
