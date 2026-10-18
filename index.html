@@ -1,6 +1,211 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Herramientas y tutoriales prácticos de inteligencia artificial."><title>IA Fácil — Herramientas y tutoriales de IA</title><style>body{margin:0;background:#0b1020;color:#f8fafc;font:16px/1.7 system-ui,Arial}a{color:#c4b5fd}.wrap{max-width:900px;margin:auto;padding:24px}header,footer{border-bottom:1px solid #ffffff22;padding:16px}header a{text-decoration:none;font-weight:bold}.panel,article{background:#151e34;border:1px solid #ffffff22;border-radius:16px;padding:20px;margin:14px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}h1{font-size:clamp(2rem,5vw,3.5rem)}p{color:#c5cee0}textarea,input,select{box-sizing:border-box;width:100%;padding:12px;margin:5px 0 12px;background:#0b1223;color:white;border:1px solid #ffffff33;border-radius:9px}textarea{min-height:90px}button{padding:11px 15px;background:#7c3aed;color:white;border:0;border-radius:10px;cursor:pointer}.tag{color:#c4b5fd;font-size:.8rem}.hero{text-align:center;padding:45px 0}.gradient{color:#a78bfa}nav{display:flex;gap:18px;flex-wrap:wrap}label{font-weight:bold}@media(min-width:700px){.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}}</style></head><body><header><div class="wrap"><nav><a href="#">✦ IA Fácil</a><a href="#generador">Generador</a><a href="#articulos">Artículos</a><a href="#sobre">Sobre la web</a></nav></div></header><main class="wrap"><section class="hero"><span class="tag">✦ IA PARA TODOS</span><h1>La inteligencia artificial,<br><span class="gradient">más fácil.</span></h1><p>Descubre herramientas de IA, aprende con guías prácticas y crea mejores instrucciones para tus proyectos.</p><a href="#generador">Probar generador gratis ↓</a></section><section id="generador"><h2>Generador de prompts IA</h2><p>Describe lo que necesitas y crea una instrucción lista para copiar.</p><div class="panel fields"><div><label for="purpose">¿Para qué lo necesitas?</label><select id="purpose"><option>Crear contenido</option><option>Estudiar o aprender</option><option>Negocio o marketing</option><option>Crear una imagen</option><option>Programar o resolver un error</option><option>Generar ideas</option></select></div><div><label for="tone">Estilo de respuesta</label><select id="tone"><option>Claro y sencillo</option><option>Profesional</option><option>Creativo</option><option>Detallado y paso a paso</option></select></div><div><label for="topic">¿Qué quieres conseguir?</label><textarea id="topic" placeholder="Ej.: Crear un vídeo corto sobre coches deportivos"></textarea></div><div><label for="audience">¿Para quién es? (opcional)</label><input id="audience" placeholder="Ej.: Principiantes"></div><div><label for="length">Longitud</label><select id="length"><option>Corta</option><option selected>Media</option><option>Larga</option></select></div><div><button id="generate">Generar prompt</button><p id="status" aria-live="polite"></p></div><div id="result" style="display:none"><label for="output">Tu prompt listo para copiar</label><textarea id="output" readonly></textarea><button id="copy">Copiar prompt</button><button id="download">Descargar .txt</button></div></div></section><section id="articulos"><h2>Guías de inteligencia artificial</h2><p>Tutoriales para empezar, aprender y utilizar la IA con criterio.</p><div class="cards"><article><span class="tag">GUÍA PRÁCTICA</span><h3>Cómo utilizar ChatGPT gratis</h3><p>Empieza con una tarea concreta. Un asistente de IA puede ayudar a explicar conceptos, organizar ideas o resumir textos que tengas permiso para compartir.</p><a href="articles/chatgpt-gratis.html">Leer artículo →</a></article><article><span class="tag">GUÍA PRÁCTICA</span><h3>Herramientas de inteligencia artificial gratuitas</h3><p>Hay herramientas para texto, imágenes, audio, productividad y programación. Primero define qué tarea quieres resolver, en vez de instalar muchas aplicaciones sin un objetivo.</p><a href="articles/herramientas-ia-gratis.html">Leer artículo →</a></article><article><span class="tag">GUÍA PRÁCTICA</span><h3>Cómo crear imágenes con inteligencia artificial</h3><p>Los generadores de imágenes convierten descripciones de texto en imágenes. Para empezar, describe el sujeto, el entorno y qué ocurre en la escena.</p><a href="articles/crear-imagenes-ia.html">Leer artículo →</a></article><article><span class="tag">GUÍA PRÁCTICA</span><h3>Cómo utilizar la IA para estudiar</h3><p>Puedes pedir explicaciones adaptadas a tu nivel, ejemplos, resúmenes de materiales propios o preguntas de práctica. Divide los temas difíciles en partes pequeñas.</p><a href="articles/ia-para-estudiar.html">Leer artículo →</a></article><article><span class="tag">GUÍA PRÁCTICA</span><h3>Cómo escribir buenos prompts</h3><p>Un prompt es la instrucción que das a una herramienta de IA. Los buenos prompts explican el objetivo, dan contexto y describen el formato esperado.</p><a href="articles/escribir-buenos-prompts.html">Leer artículo →</a></article></div></section><section id="sobre"><h2>Sobre IA Fácil</h2><article><h3>Nuestro objetivo</h3><p>Publicar tutoriales claros y útiles para ayudar a las personas a comprender y aprovechar la IA.</p></article><article><h3>Uso responsable</h3><p>Verifica la información, respeta las condiciones de cada servicio y no compartas datos confidenciales.</p></article><article><strong>Antes de solicitar AdSense:</strong><p>Configura un contacto real, una política de privacidad adecuada y revisa los requisitos oficiales de Google. Personaliza los artículos con ejemplos y experiencia propia; la aprobación no está garantizada.</p></article></section></main><footer><div class="wrap">© <span id="year"></span> IA Fácil · <a href="#sobre">Sobre nosotros</a> · <a href="privacidad.html">Política de privacidad</a> · <a href="contacto.html">Contacto</a></div></footer><script>
-const $=id=>document.getElementById(id);$('year').textContent=new Date().getFullYear();
-$('generate').onclick=()=>{let topic=$('topic').value.trim();if(!topic){$('status').textContent='Escribe primero qué quieres conseguir.';return}let audience=$('audience').value.trim();$('output').value=`Actúa como un asistente experto en ${$('purpose').value.toLowerCase()}.\n\nOBJETIVO\n${topic}\n\n${audience?'PÚBLICO OBJETIVO\n'+audience+'\n\n':''}ESTILO\nResponde de forma ${$('tone').value.toLowerCase()} y con una longitud ${$('length').value.toLowerCase()}.\n\nINSTRUCCIONES\n- Organiza la respuesta de forma clara y práctica.\n- Incluye ejemplos concretos cuando sean útiles.\n- Si falta información importante, pregunta antes de asumir.\n- No inventes datos; señala incertidumbres y limitaciones.`;$('result').style.display='block';$('status').textContent='Prompt creado.'};
-$('copy').onclick=async()=>{try{await navigator.clipboard.writeText($('output').value);$('status').textContent='¡Copiado!'}catch(e){$('output').select();document.execCommand('copy')}};
-$('download').onclick=()=>{let a=document.createElement('a'),u=URL.createObjectURL(new Blob([$('output').value],{type:'text/plain'}));a.href=u;a.download='prompt-ia-facil.txt';a.click();URL.revokeObjectURL(u)};
-</script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Descubre herramientas de inteligencia artificial, aprende con tutoriales y encuentra recursos gratuitos para crear y trabajar mejor.">
+  <title>IA Fácil — Descubre herramientas de inteligencia artificial</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020; --panel: #121a2e; --panel2: #17213a;
+      --text: #f8fafc; --muted: #b8c3d9; --purple: #8b5cf6;
+      --purple2: #a78bfa; --border: rgba(184,195,217,.15);
+      --radius: 18px; --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: radial-gradient(ellipse at 80% -10%, rgba(124,58,237,.20), transparent 38%), var(--bg);
+      color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 36px)); margin-inline: auto; }
+    header { border-bottom: 1px solid var(--border); background: rgba(11,16,32,.82); backdrop-filter: blur(14px); position: sticky; top: 0; z-index: 5; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:76px; }
+    .brand { display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:800; font-size:1.2rem; letter-spacing:-.04em; }
+    .logo { display:grid; place-items:center; width:38px; height:38px; border-radius:12px; background:linear-gradient(135deg,#7c3aed,#4f46e5); box-shadow:0 8px 24px #7c3aed33; }
+    .navlinks { display:flex; align-items:center; gap:20px; }
+    .navlinks a { text-decoration:none; color:var(--muted); font-size:.94rem; }
+    .navlinks a:hover, footer a:hover { color:var(--text); }
+    button, input { font:inherit; }
+    .lang { border:1px solid var(--border); color:var(--text); background:var(--panel); padding:8px 11px; border-radius:10px; cursor:pointer; }
+    .hero { padding:76px 0 48px; text-align:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:7px 12px; border:1px solid #8b5cf644; background:#8b5cf614; border-radius:999px; color:#c4b5fd; font-size:.83rem; font-weight:700; }
+    h1 { font-size:clamp(2.4rem, 6vw, 4.5rem); line-height:1.06; letter-spacing:-.06em; max-width:850px; margin:22px auto 18px; }
+    .gradient { background:linear-gradient(90deg,#c4b5fd,#818cf8,#67e8f9); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero p { color:var(--muted); max-width:690px; margin:0 auto; font-size:1.08rem; }
+    .actions { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin-top:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; border-radius:12px; padding:12px 17px; font-weight:750; text-decoration:none; border:1px solid var(--border); cursor:pointer; }
+    .btn-primary { color:white; border:0; background:linear-gradient(135deg,#7c3aed,#5b5bd6); box-shadow:0 10px 30px #6d28d933; }
+    .btn-secondary { color:var(--text); background:#ffffff08; }
+    .section { padding:36px 0 58px; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:20px; }
+    h2 { font-size:clamp(1.5rem,3vw,2rem); letter-spacing:-.04em; margin:0; }
+    .section-head p { color:var(--muted); margin:5px 0 0; }
+    .search { width:min(100%,300px); padding:12px 14px; color:var(--text); background:var(--panel); border:1px solid var(--border); border-radius:12px; outline:none; }
+    .search:focus { border-color:var(--purple2); box-shadow:0 0 0 3px #8b5cf622; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .card { background:linear-gradient(160deg,#151e34,#101729); border:1px solid var(--border); border-radius:var(--radius); padding:22px; min-height:210px; display:flex; flex-direction:column; transition:transform .18s,border-color .18s; }
+    .card:hover { transform:translateY(-3px); border-color:#a78bfa66; }
+    .icon { width:46px; height:46px; display:grid; place-items:center; border-radius:14px; background:#8b5cf61c; font-size:1.45rem; }
+    .card h3 { margin:16px 0 6px; font-size:1.1rem; }
+    .card p { margin:0; color:var(--muted); font-size:.95rem; }
+    .tag { margin-top:auto; padding-top:17px; color:#c4b5fd; font-size:.82rem; font-weight:700; }
+    .notice { border:1px solid var(--border); background:#ffffff05; padding:20px; border-radius:var(--radius); color:var(--muted); margin-top:22px; }
+    .notice strong { color:var(--text); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .info { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:24px; }
+    .info p { color:var(--muted); margin-bottom:0; }
+    footer { border-top:1px solid var(--border); padding:28px 0 36px; color:var(--muted); font-size:.9rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; }
+    footer a { color:var(--muted); margin-left:14px; }
+    .empty { display:none; color:var(--muted); padding:24px 0; }
+    @media (max-width:760px) {
+      .navlinks { gap:12px; } .navlinks a { display:none; }
+      .hero { padding-top:56px; } .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .section-head { align-items:stretch; flex-direction:column; } .search { width:100%; }
+    }
+    @media (max-width:500px) {
+      .grid,.about-grid { grid-template-columns:1fr; }
+      .card { min-height:180px; }
+      .hero p { font-size:1rem; }
+      .wrap { width:min(var(--max),calc(100% - 28px)); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="IA Fácil, inicio"><span class="logo">✦</span><span>IA Fácil</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#herramientas" data-es="Herramientas" data-en="Tools">Herramientas</a>
+        <a href="#sobre" data-es="Sobre la web" data-en="About">Sobre la web</a>
+        <button class="lang" id="langToggle" type="button" aria-label="Change language">ES / EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <span class="eyebrow" data-es="✦ IA para todos" data-en="✦ AI for everyone">✦ IA para todos</span>
+      <h1 data-es="La inteligencia artificial, <span class='gradient'>más fácil.</span>" data-en="Artificial intelligence, <span class='gradient'>made easier.</span>">La inteligencia artificial, <span class="gradient">más fácil.</span></h1>
+      <p data-es="Descubre herramientas de IA, aprende con tutoriales sencillos y encuentra recursos para crear y trabajar mejor." data-en="Discover AI tools, learn with simple tutorials, and find resources to create and work smarter.">Descubre herramientas de IA, aprende con tutoriales sencillos y encuentra recursos para crear y trabajar mejor.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#herramientas" data-es="Explorar herramientas →" data-en="Explore tools →">Explorar herramientas →</a>
+        <a class="btn btn-secondary" href="#sobre" data-es="Conócenos" data-en="About us">Conócenos</a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="herramientas">
+      <div class="section-head">
+        <div>
+          <h2 data-es="Explora por categoría" data-en="Explore by category">Explora por categoría</h2>
+          <p data-es="Una selección inicial para descubrir lo que puedes hacer con IA." data-en="A starter collection to discover what you can do with AI.">Una selección inicial para descubrir lo que puedes hacer con IA.</p>
+        </div>
+        <input id="search" class="search" type="search" placeholder="Buscar categorías..." aria-label="Search categories">
+      </div>
+      <div class="grid" id="cards">
+        <article class="card" data-search="asistentes chat escritura preguntas assistants chat writing questions">
+          <div class="icon" aria-hidden="true">💬</div><h3 data-es="Asistentes de IA" data-en="AI assistants">Asistentes de IA</h3>
+          <p data-es="Herramientas para escribir, aprender, resumir y resolver dudas." data-en="Tools to write, learn, summarize, and answer questions.">Herramientas para escribir, aprender, resumir y resolver dudas.</p>
+          <div class="tag" data-es="Guías para principiantes" data-en="Beginner guides">Guías para principiantes</div>
+        </article>
+        <a class="card" href="resumidor-textos-a-apuntes.html" data-search="resumidor resumir texto apuntes estudiar grado medio bachillerato summary notes study" style="text-decoration:none; color:inherit;">
+          <div class="icon" aria-hidden="true">📝</div><h3 data-es="Resumidor de textos" data-en="Text summarizer">Resumidor de textos</h3>
+          <p data-es="Convierte tus apuntes y textos en resúmenes breves para estudiar en Grado Medio o Bachillerato. Funciona gratis en tu navegador." data-en="Turn your notes and texts into short study summaries for vocational studies or high school. Works for free in your browser.">Convierte tus apuntes y textos en resúmenes breves para estudiar en Grado Medio o Bachillerato. Funciona gratis en tu navegador.</p>
+          <div class="tag" data-es="Probar herramienta →" data-en="Try the tool →">Probar herramienta →</div>
+        </a>
+        <article class="card" data-search="imagen diseño arte image design art">
+          <div class="icon" aria-hidden="true">🎨</div><h3 data-es="Imagen y diseño" data-en="Images and design">Imagen y diseño</h3>
+          <p data-es="Descubre herramientas creativas para imágenes, diseños e ideas visuales." data-en="Discover creative tools for images, designs, and visual ideas.">Descubre herramientas creativas para imágenes, diseños e ideas visuales.</p>
+          <div class="tag" data-es="Creatividad" data-en="Creativity">Creatividad</div>
+        </article>
+        <article class="card" data-search="productividad trabajo productividad productivity work">
+          <div class="icon" aria-hidden="true">⚡</div><h3 data-es="Productividad" data-en="Productivity">Productividad</h3>
+          <p data-es="Ideas para organizar tareas y ahorrar tiempo en actividades cotidianas." data-en="Ideas to organize tasks and save time on everyday work.">Ideas para organizar tareas y ahorrar tiempo en actividades cotidianas.</p>
+          <div class="tag" data-es="Trabajo inteligente" data-en="Work smarter">Trabajo inteligente</div>
+        </article>
+        <article class="card" data-search="programación código coding code">
+          <div class="icon" aria-hidden="true">⌘</div><h3 data-es="Código y programación" data-en="Code and programming">Código y programación</h3>
+          <p data-es="Recursos para entender código y crear pequeños proyectos." data-en="Resources to understand code and build small projects.">Recursos para entender código y crear pequeños proyectos.</p>
+          <div class="tag" data-es="Aprende haciendo" data-en="Learn by doing">Aprende haciendo</div>
+        </article>
+        <article class="card" data-search="audio voz música audio voice music">
+          <div class="icon" aria-hidden="true">🎧</div><h3 data-es="Audio y voz" data-en="Audio and voice">Audio y voz</h3>
+          <p data-es="Explora herramientas de voz, transcripción y creación de audio." data-en="Explore voice, transcription, and audio creation tools.">Explora herramientas de voz, transcripción y creación de audio.</p>
+          <div class="tag" data-es="Sonido" data-en="Sound">Sonido</div>
+        </article>
+        <article class="card" data-search="tutoriales aprender guías tutorials learn guides">
+          <div class="icon" aria-hidden="true">📚</div><h3 data-es="Tutoriales" data-en="Tutorials">Tutoriales</h3>
+          <p data-es="Explicaciones paso a paso para empezar a utilizar la IA." data-en="Step-by-step explanations to start using AI.">Explicaciones paso a paso para empezar a utilizar la IA.</p>
+          <div class="tag" data-es="Paso a paso" data-en="Step by step">Paso a paso</div>
+        </article>
+      </div>
+      <p class="empty" id="empty" data-es="No se encontraron categorías. Prueba con otra búsqueda." data-en="No categories found. Try another search.">No se encontraron categorías. Prueba con otra búsqueda.</p>
+      <div class="notice">
+        <strong data-es="Estamos empezando." data-en="We're just getting started.">Estamos empezando.</strong>
+        <span data-es=" Esta versión es la base de IA Fácil. Añadiremos artículos y herramientas verificadas antes de solicitar la monetización." data-en=" This is the foundation of IA Fácil. We'll add useful articles and verified tools before applying for monetization."> Esta versión es la base de IA Fácil. Añadiremos artículos y herramientas verificadas antes de solicitar la monetización.</span>
+      </div>
+    </section>
+
+    <section class="section wrap" id="sobre">
+      <div class="section-head">
+        <div><h2 data-es="¿Qué es IA Fácil?" data-en="What is IA Fácil?">¿Qué es IA Fácil?</h2>
+          <p data-es="Un proyecto para acercar la inteligencia artificial a todo el mundo." data-en="A project to make artificial intelligence more accessible to everyone.">Un proyecto para acercar la inteligencia artificial a todo el mundo.</p>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="info"><h3 data-es="Nuestro objetivo" data-en="Our goal">Nuestro objetivo</h3><p data-es="Publicar explicaciones claras, tutoriales útiles y recursos que ayuden a las personas a entender y aprovechar la IA." data-en="Publish clear explanations, useful tutorials, and resources that help people understand and use AI.">Publicar explicaciones claras, tutoriales útiles y recursos que ayuden a las personas a entender y aprovechar la IA.</p></div>
+        <div class="info"><h3 data-es="Contenido responsable" data-en="Responsible content">Contenido responsable</h3><p data-es="Revisaremos la información, indicaremos las limitaciones de las herramientas y evitaremos promesas engañosas. Las funciones y precios de servicios externos pueden cambiar." data-en="We'll review information, explain tool limitations, and avoid misleading claims. External services' features and prices may change.">Revisaremos la información, indicaremos las limitaciones de las herramientas y evitaremos promesas engañosas. Las funciones y precios de servicios externos pueden cambiar.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> IA Fácil · <span data-es="Hecho para aprender." data-en="Built for learning.">Hecho para aprender.</span></div>
+      <div><a href="#sobre" data-es="Sobre nosotros" data-en="About">Sobre nosotros</a><a href="mailto:hola@tudominio.example" data-es="Contacto (configurar)" data-en="Contact (configure)">Contacto (configurar)</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('langToggle');
+    const search = document.getElementById('search');
+    const cards = [...document.querySelectorAll('#cards .card')];
+    const empty = document.getElementById('empty');
+    let language = 'es';
+
+    function setLanguage(next) {
+      language = next;
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-es][data-en]').forEach(el => {
+        const value = el.dataset[language];
+        // Hero heading intentionally contains safe, authored markup for its gradient.
+        if (el.tagName === 'H1') el.innerHTML = value;
+        else el.textContent = value;
+      });
+      search.placeholder = language === 'es' ? 'Buscar categorías...' : 'Search categories...';
+      search.setAttribute('aria-label', language === 'es' ? 'Buscar categorías' : 'Search categories');
+      toggle.textContent = language === 'es' ? 'ES / EN' : 'EN / ES';
+      filterCards();
+    }
+    toggle.addEventListener('click', () => setLanguage(language === 'es' ? 'en' : 'es'));
+
+    function filterCards() {
+      const q = search.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const searchable = (card.dataset.search + ' ' + card.innerText).toLowerCase();
+        const show = searchable.includes(q);
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      empty.style.display = visible ? 'none' : 'block';
+    }
+    search.addEventListener('input', filterCards);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
